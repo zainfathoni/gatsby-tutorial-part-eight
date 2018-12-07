@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { css } from '@emotion/core'
 import { Link, graphql } from 'gatsby'
 import { rhythm } from '../utils/typography'
@@ -7,6 +8,11 @@ import Layout from '../components/layout'
 export default ({ data }) => {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Title</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div>
         <h1
           css={css`
